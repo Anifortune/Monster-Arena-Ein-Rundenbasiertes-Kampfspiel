@@ -43,7 +43,7 @@ python game.py
 ```bash
 python game.py
 
-
+## 🧱 Klassenübersicht
 | Klasse                | Beschreibung                                            |
 | --------------------- | ------------------------------------------------------- |
 | `Monster`             | Repräsentiert ein Monster mit HP, Angriff, etc.         |
