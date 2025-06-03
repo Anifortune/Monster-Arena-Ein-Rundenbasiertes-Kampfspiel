@@ -15,12 +15,14 @@
 
 ## 📁 Projektstruktur
 
+<pre>
 monster_arena/
-├── game.py # Einstiegspunkt, Spielsteuerung
-├── monster.py # Monster-Basis und Methoden
-├── attack.py # Angriffslogik
-├── battle_manager.py # Kampfabwicklung
-├── README.md # Projektdokumentation
+├── game.py              # Einstiegspunkt, Spielsteuerung
+├── monster.py           # Monster-Basis und Methoden
+├── attack.py            # Angriffslogik
+├── battle_manager.py    # Kampfabwicklung
+├── README.md            # Projektdokumentation
+</pre>
 
 ---
 
@@ -29,6 +31,11 @@ monster_arena/
 ### Voraussetzungen
 - Python 3.10 oder neuer  
 (Optional: eine IDE wie VS Code, PyCharm oder Thonny)
+
+### Starten des Spiels
+
+```bash
+python game.py
 
 ### Starten des Spiels
 
