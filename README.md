@@ -38,11 +38,6 @@ monster_arena/
 python game.py
 
 
-### Starten des Spiels
-
-```bash
-python game.py
-
 ---
 ## 🧱 Klassenübersicht
 
