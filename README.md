@@ -45,12 +45,14 @@ python game.py
 
 ---
 ## 🧱 Klassenübersicht
-| Klasse                | Beschreibung                                            |
-| --------------------- | ------------------------------------------------------- |
-| `Monster`             | Repräsentiert ein Monster mit HP, Angriff, etc.         |
-| `Attack`              | Modelliert einen Angriff mit Schaden & Kosten           |
-| `BattleManager`       | Steuert den Ablauf eines Kampfes zwischen zwei Monstern |
-| `Game` (in `game.py`) | Einstiegspunkt, Spielmenü und Monsterwahl               |
+
+| Klasse           | Beschreibung                                           |
+|------------------|--------------------------------------------------------|
+| `Monster`        | Repräsentiert ein Monster mit HP, Angriff, Verteidigung und grundlegenden Methoden für Kampfaktionen |
+| `Attack`         | Modelliert einen einzelnen Angriff mit Name, Schaden und ggf. Kosten (z. B. Energie) |
+| `BattleManager`  | Steuert den Ablauf eines Kampfes zwischen Spieler- und Gegner-Monster, verwaltet die Rundenlogik |
+| `Game`           | Einstiegspunkt des Spiels, steuert die Initialisierung, Monsterwahl und Start des Kampfes |
+
 
 
 🚀 Geplante Erweiterungen
