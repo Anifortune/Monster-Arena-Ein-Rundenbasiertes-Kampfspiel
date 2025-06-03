@@ -2,7 +2,7 @@ from monster import Monster
 from battle_manager import BattleManager
 import random
 
-# Liste verfügbarer Monster für Spieler und Gegner
+# Liste verfügbarer Monster
 available_monsters = [
     Monster("Pyron", health=100, attack=20, defense=5),
     Monster("Aqualis", health=90, attack=18, defense=6),
@@ -11,7 +11,7 @@ available_monsters = [
 ]
 
 def choose_monster():
-    print("🎮 Willkommen in der Monster Arena!")
+    """Lässt den Spieler ein Monster auswählen."""
     print("\nWähle dein Monster:\n")
 
     for i, monster in enumerate(available_monsters):
@@ -30,18 +30,34 @@ def choose_monster():
             print("❌ Bitte gib eine gültige Zahl ein.")
 
 def choose_enemy(exclude_monster):
-    # Wähle zufälligen Gegner, der nicht identisch ist mit dem Spieler-Monster
+    """Wählt zufällig ein gegnerisches Monster, das nicht das Spieler-Monster ist."""
     candidates = [m for m in available_monsters if m.name != exclude_monster.name]
     return random.choice(candidates)
 
 def main():
-    player = choose_monster()
-    enemy = choose_enemy(player)
+    """Startet das Spiel und fragt, ob der Spieler erneut spielen möchte."""
+    print("🎮 Willkommen in der MONSTER ARENA!")
+    print("Stelle dich im rundenbasierten Kampf einem zufälligen Gegner.\n")
 
-    print(f"⚔️ Dein Gegner ist {enemy.name}! (HP: {enemy.health}, ATK: {enemy.attack}, DEF: {enemy.defense})\n")
+    while True:
+        # Monster auswählen
+        player = choose_monster()
 
-    battle = BattleManager(player, enemy)
-    battle.start_battle()
+        # Gegner zufällig wählen
+        enemy = choose_enemy(player)
+        print(f"⚔️ Dein Gegner ist {enemy.name}!")
+        print(f"   HP: {enemy.health}, ATK: {enemy.attack}, DEF: {enemy.defense}\n")
+
+        # Kampf starten
+        battle = BattleManager(player, enemy)
+        battle.start_battle()
+
+        # Wiederholung abfragen
+        again = input("\n🔁 Möchtest du nochmal spielen? (j/n): ").strip().lower()
+        if again != 'j':
+            print("\n👋 Danke fürs Spielen! Bis zum nächsten Mal.")
+            break
 
 if __name__ == "__main__":
     main()
+
