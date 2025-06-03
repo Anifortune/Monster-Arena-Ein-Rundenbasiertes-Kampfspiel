@@ -37,16 +37,20 @@ monster_arena/
 ```bash
 python game.py
 
+
 ### Starten des Spiels
 
 ```bash
 python game.py
-🧱 Klassenübersicht
-Klasse	Beschreibung
-Monster	Repräsentiert ein Monster mit HP, Angriff, etc.
-Attack	Modelliert einen Angriff mit Schaden & Kosten
-BattleManager	Steuert den Ablauf eines Kampfes zwischen zwei Monstern
-Game (in game.py)	Einstiegspunkt, Spielmenü und Monsterwahl
+
+
+| Klasse                | Beschreibung                                            |
+| --------------------- | ------------------------------------------------------- |
+| `Monster`             | Repräsentiert ein Monster mit HP, Angriff, etc.         |
+| `Attack`              | Modelliert einen Angriff mit Schaden & Kosten           |
+| `BattleManager`       | Steuert den Ablauf eines Kampfes zwischen zwei Monstern |
+| `Game` (in `game.py`) | Einstiegspunkt, Spielmenü und Monsterwahl               |
+
 
 🚀 Geplante Erweiterungen
 Spezialfähigkeiten für bestimmte Monstertypen
