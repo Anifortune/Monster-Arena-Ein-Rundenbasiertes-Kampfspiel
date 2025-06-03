@@ -43,6 +43,7 @@ python game.py
 ```bash
 python game.py
 
+---
 ## 🧱 Klassenübersicht
 | Klasse                | Beschreibung                                            |
 | --------------------- | ------------------------------------------------------- |
